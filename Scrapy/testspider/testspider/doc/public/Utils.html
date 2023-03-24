@@ -1,0 +1,750 @@
+
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Utils方法 &#8212; utils说明文档 0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/translations.js"></script>
+    
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="utils说明文档" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="utils说明文档"
+             accesskey="P">上一页</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">utils说明文档 0.1 文档</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Utils方法</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="utils">
+<h1>Utils方法<a class="headerlink" href="#utils" title="此标题的永久链接">¶</a></h1>
+<section id="module-utils.date">
+<span id="date"></span><h2>date（时间）<a class="headerlink" href="#module-utils.date" title="此标题的永久链接">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.date.date_ago">
+<span class="sig-prename descclassname"><span class="pre">utils.date.</span></span><span class="sig-name descname"><span class="pre">date_ago</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.date.date_ago" title="永久链接至目标">¶</a></dt>
+<dd><p>计算指定时间距离今天多少天
+diff_date - current_date</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target_date</strong> – 目标日期</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>天数差</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.date.date_parse">
+<span class="sig-prename descclassname"><span class="pre">utils.date.</span></span><span class="sig-name descname"><span class="pre">date_parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">date_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">datetime</span></span></span><a class="headerlink" href="#utils.date.date_parse" title="永久链接至目标">¶</a></dt>
+<dd><p>输入任意字符串返回datetime类型</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>date_str</strong> – ‘1991-05-17’ / ‘In two months’ / 1484823450</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>datetime.datetime(2017, 1, 19, 10, 57, 30)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.date.greater_than_oneday">
+<span class="sig-prename descclassname"><span class="pre">utils.date.</span></span><span class="sig-name descname"><span class="pre">greater_than_oneday</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">day_nums</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.date.greater_than_oneday" title="永久链接至目标">¶</a></dt>
+<dd><p>输入距今天数  和  某天日期，
+比较是否 距今天数的日期  &lt;=  某天</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>day_nums</strong> – 距今天数</p></li>
+<li><p><strong>target_date</strong> – 目标日期</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>是否小于等于</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.date.javascript_timestamp">
+<span class="sig-prename descclassname"><span class="pre">utils.date.</span></span><span class="sig-name descname"><span class="pre">javascript_timestamp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#utils.date.javascript_timestamp" title="永久链接至目标">¶</a></dt>
+<dd><p>同 js代码  Date.parse(dt)
+得到 13 位当前时间的时间戳 如1562255999000，后三位固定为 000</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>时间戳</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.date.now_timestamp">
+<span class="sig-prename descclassname"><span class="pre">utils.date.</span></span><span class="sig-name descname"><span class="pre">now_timestamp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#utils.date.now_timestamp" title="永久链接至目标">¶</a></dt>
+<dd><p>返回13位当前时间的时间戳  后三位是有数字的！！！！！！</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>时间戳</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.date.previous_date">
+<span class="sig-prename descclassname"><span class="pre">utils.date.</span></span><span class="sig-name descname"><span class="pre">previous_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">day_nums</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%Y-%m-%d'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#utils.date.previous_date" title="永久链接至目标">¶</a></dt>
+<dd><p>输入数字返回距离当天第x天的日期 年-月-日 日期为该天00:00:00
+date_model 可以设置日期格式 默认为年-月-日  如 2001-01-31</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>date_model</strong> – 日期格式 （默认’%Y-%m-%d’）</p></li>
+<li><p><strong>day_nums</strong> – 相隔天数</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>目标日期</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.date.time_transformation">
+<span class="sig-prename descclassname"><span class="pre">utils.date.</span></span><span class="sig-name descname"><span class="pre">time_transformation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.date.time_transformation" title="永久链接至目标">¶</a></dt>
+<dd><p>jinja2 时间戳转换日期</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timestamp</strong> – 时间戳 10位</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>日期  年-月-日</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.date.time_zone_conversion">
+<span class="sig-prename descclassname"><span class="pre">utils.date.</span></span><span class="sig-name descname"><span class="pre">time_zone_conversion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">date_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_zone</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.date.time_zone_conversion" title="永久链接至目标">¶</a></dt>
+<dd><p>将日期转换为设置时区的年月日</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>date_time</strong> – 如 2023-03-29T15:00:00.000+00:00 的str格式</p></li>
+<li><p><strong>time_zone</strong> – 时区 int格式</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>日期</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.date.timestamp_to_date">
+<span class="sig-prename descclassname"><span class="pre">utils.date.</span></span><span class="sig-name descname"><span class="pre">timestamp_to_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.date.timestamp_to_date" title="永久链接至目标">¶</a></dt>
+<dd><p>时间戳 转换成日期</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timestamp</strong> – 时间戳 10位</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>日期  年-月-日</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-utils.exceptions">
+<span id="exceptions"></span><h2>exceptions<a class="headerlink" href="#module-utils.exceptions" title="此标题的永久链接">¶</a></h2>
+<dl class="py exception">
+<dt class="sig sig-object py" id="utils.exceptions.CaptchaFixError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">utils.exceptions.</span></span><span class="sig-name descname"><span class="pre">CaptchaFixError</span></span><a class="headerlink" href="#utils.exceptions.CaptchaFixError" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="utils.exceptions.NoContentAndFile">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">utils.exceptions.</span></span><span class="sig-name descname"><span class="pre">NoContentAndFile</span></span><a class="headerlink" href="#utils.exceptions.NoContentAndFile" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="utils.exceptions.NoExtType">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">utils.exceptions.</span></span><span class="sig-name descname"><span class="pre">NoExtType</span></span><a class="headerlink" href="#utils.exceptions.NoExtType" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="utils.exceptions.StatusCodeNotAllow">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">utils.exceptions.</span></span><span class="sig-name descname"><span class="pre">StatusCodeNotAllow</span></span><a class="headerlink" href="#utils.exceptions.StatusCodeNotAllow" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="utils.exceptions.TooManyTriesError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">utils.exceptions.</span></span><span class="sig-name descname"><span class="pre">TooManyTriesError</span></span><a class="headerlink" href="#utils.exceptions.TooManyTriesError" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+</section>
+<section id="module-utils.file">
+<span id="file"></span><h2>file<a class="headerlink" href="#module-utils.file" title="此标题的永久链接">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.file.ztb_transform">
+<span class="sig-prename descclassname"><span class="pre">utils.file.</span></span><span class="sig-name descname"><span class="pre">ztb_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">origin_file_url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.file.ztb_transform" title="永久链接至目标">¶</a></dt>
+<dd><p>下载链接带downloadztbattach的是会进行跳转的下载链接
+如：/attach/downloadztbattach
+跳转的新链接为真实下载链接
+如：/attach/ztbAttachDownloadAction.action
+输入origin_file_url 为原始下载链接 其中的params参数用于新链接的参数
+新的链接多了ztbAttachDownloadAction.action?cmd=getContent&amp;参数</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>origin_file_url</strong> – 原始下载链接</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>true_file_url</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-utils.html">
+<span id="html"></span><h2>html<a class="headerlink" href="#module-utils.html" title="此标题的永久链接">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.html.html_unescape">
+<span class="sig-prename descclassname"><span class="pre">utils.html.</span></span><span class="sig-name descname"><span class="pre">html_unescape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.html.html_unescape" title="永久链接至目标">¶</a></dt>
+<dd><p>将content 变成 html 语言
+比如 &amp;nt &amp;gt….. 变成&lt;&gt;</p>
+<p>:param content：待处理文本
+:return: html</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.html.remove_comments">
+<span class="sig-prename descclassname"><span class="pre">utils.html.</span></span><span class="sig-name descname"><span class="pre">remove_comments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.html.remove_comments" title="永久链接至目标">¶</a></dt>
+<dd><p>删除 HTML 注释。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> – HTML</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>处理后的HTML</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.html.remove_escape_chars">
+<span class="sig-prename descclassname"><span class="pre">utils.html.</span></span><span class="sig-name descname"><span class="pre">remove_escape_chars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.html.remove_escape_chars" title="永久链接至目标">¶</a></dt>
+<dd><p>删除转义字符</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> – HTML</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>处理后的HTML</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.html.remove_html5_whitespace">
+<span class="sig-prename descclassname"><span class="pre">utils.html.</span></span><span class="sig-name descname"><span class="pre">remove_html5_whitespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.html.remove_html5_whitespace" title="永久链接至目标">¶</a></dt>
+<dd><p>去除所有前后空格字符( \t\n\r\x0c)</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> – HTML</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>处理后的HTML</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.html.remove_tags">
+<span class="sig-prename descclassname"><span class="pre">utils.html.</span></span><span class="sig-name descname"><span class="pre">remove_tags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">which_ones</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.html.remove_tags" title="永久链接至目标">¶</a></dt>
+<dd><p>仅删除 HTML 标签。
+which_ones  keep    它能做什么
+不是空的        空的      删除所有which_ones标签
+空的  不是空的    删除所有标签keep之外的标签
+空的  空的      删除所有标签
+不是空的        不是空的    不允许</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – HTML</p></li>
+<li><p><strong>which_ones</strong> – 需要删除的标签</p></li>
+<li><p><strong>keep</strong> – 需要保留的标签</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>处理后的HTML</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.html.remove_tags_content">
+<span class="sig-prename descclassname"><span class="pre">utils.html.</span></span><span class="sig-name descname"><span class="pre">remove_tags_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">which_ones</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.html.remove_tags_content" title="永久链接至目标">¶</a></dt>
+<dd><p>删除标签及其内容</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – HTML</p></li>
+<li><p><strong>which_ones</strong> – 要删除哪些标签的元组，包括它们的内容。如果为空，则返回未修改的字符串。</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>处理后的HTML</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.html.replace_tags">
+<span class="sig-prename descclassname"><span class="pre">utils.html.</span></span><span class="sig-name descname"><span class="pre">replace_tags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old_tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_tag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.html.replace_tags" title="永久链接至目标">¶</a></dt>
+<dd><p>将文本中的tag类型替换</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – 待处理文本</p></li>
+<li><p><strong>old_tag</strong> – 需要替换的旧标签名</p></li>
+<li><p><strong>new_tag</strong> – 用来替换的新标签名</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>处理后的文本</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-utils.js_function">
+<span id="js-function"></span><h2>js_function<a class="headerlink" href="#module-utils.js_function" title="此标题的永久链接">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.js_function.clear_function">
+<span class="sig-prename descclassname"><span class="pre">utils.js_function.</span></span><span class="sig-name descname"><span class="pre">clear_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">js_function_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#utils.js_function.clear_function" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>js_function_str</strong> – javascript:view(‘’, ‘’);</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-utils.number">
+<span id="number"></span><h2>number<a class="headerlink" href="#module-utils.number" title="此标题的永久链接">¶</a></h2>
+</section>
+<section id="module-utils.response">
+<span id="response"></span><h2>response<a class="headerlink" href="#module-utils.response" title="此标题的永久链接">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.response.get_set_cookie">
+<span class="sig-prename descclassname"><span class="pre">utils.response.</span></span><span class="sig-name descname"><span class="pre">get_set_cookie</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">response</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.response.get_set_cookie" title="永久链接至目标">¶</a></dt>
+<dd><p>输入reponse 获取set_cookie</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>response</strong> – 发起请求后的响应</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>含cookies字典的列表</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-utils.text">
+<span id="text"></span><h2>text<a class="headerlink" href="#module-utils.text" title="此标题的永久链接">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.text.clean_text">
+<span class="sig-prename descclassname"><span class="pre">utils.text.</span></span><span class="sig-name descname"><span class="pre">clean_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#utils.text.clean_text" title="永久链接至目标">¶</a></dt>
+<dd><p>清洗特殊字符</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>string</strong> – 正文内容</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>清洗后的正文内容</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.text.clear_file_name">
+<span class="sig-prename descclassname"><span class="pre">utils.text.</span></span><span class="sig-name descname"><span class="pre">clear_file_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#utils.text.clear_file_name" title="永久链接至目标">¶</a></dt>
+<dd><p>对文件名中的一些特殊字符进行去除如\n\r等</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_name</strong> – 待处理文件名</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>清洗后的文件名</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.text.clear_title">
+<span class="sig-prename descclassname"><span class="pre">utils.text.</span></span><span class="sig-name descname"><span class="pre">clear_title</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#utils.text.clear_title" title="永久链接至目标">¶</a></dt>
+<dd><p>对标题中的一些特殊字符进行去除 如’\t\n\r nbsp;’等</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>word</strong> – 需要处理的字符串</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>处理后的字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.text.tailless">
+<span class="sig-prename descclassname"><span class="pre">utils.text.</span></span><span class="sig-name descname"><span class="pre">tailless</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#utils.text.tailless" title="永久链接至目标">¶</a></dt>
+<dd><p>去除字符串末尾的`类型标注`</p>
+<p>Example:
+tailless(‘/a/b/c.docs’) # =&gt; ‘/a/b/c’</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>(</strong><strong>str</strong><strong>)</strong> (<em>string</em>) – 需要处理的字符串</p>
+</dd>
+<dt class="field-even">Return str<span class="colon">:</span></dt>
+<dd class="field-even"><p>处理后的字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.text.text_to_json">
+<span class="sig-prename descclassname"><span class="pre">utils.text.</span></span><span class="sig-name descname"><span class="pre">text_to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.text.text_to_json" title="永久链接至目标">¶</a></dt>
+<dd><p>将text变成json</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> – 待处理字符串</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>json</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-utils.url">
+<span id="url"></span><h2>url<a class="headerlink" href="#module-utils.url" title="此标题的永久链接">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.url.add_or_replace_param">
+<span class="sig-prename descclassname"><span class="pre">utils.url.</span></span><span class="sig-name descname"><span class="pre">add_or_replace_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#utils.url.add_or_replace_param" title="永久链接至目标">¶</a></dt>
+<dd><p>新增或替换url中的单个参数</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> – <a class="reference external" href="http://www.example.com/index.php">http://www.example.com/index.php</a></p></li>
+<li><p><strong>param_key</strong> – arg</p></li>
+<li><p><strong>param_value</strong> – v</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://www.example.com/index.php?arg=v">http://www.example.com/index.php?arg=v</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.url.add_or_replace_params">
+<span class="sig-prename descclassname"><span class="pre">utils.url.</span></span><span class="sig-name descname"><span class="pre">add_or_replace_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#utils.url.add_or_replace_params" title="永久链接至目标">¶</a></dt>
+<dd><p>新增或替换url中的多个参数</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> – <a class="reference external" href="http://www.example.com/index.php">http://www.example.com/index.php</a></p></li>
+<li><p><strong>params</strong> – {“arg”, “v”}</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://www.example.com/index.php?arg=v">http://www.example.com/index.php?arg=v</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.url.clean_url">
+<span class="sig-prename descclassname"><span class="pre">utils.url.</span></span><span class="sig-name descname"><span class="pre">clean_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url_string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.url.clean_url" title="永久链接至目标">¶</a></dt>
+<dd><p>对 正则匹配后的 a标签的href 进行清洗</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>url_string</strong> – ‘ “<a class="reference external" href="http://xxxxx.xxxxx.xxxx">http://xxxxx.xxxxx.xxxx</a>”  target=_blank’</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>‘<a class="reference external" href="http://xxxxx.xxxxx.xxxx">http://xxxxx.xxxxx.xxxx</a>’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.url.format_url">
+<span class="sig-prename descclassname"><span class="pre">utils.url.</span></span><span class="sig-name descname"><span class="pre">format_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.url.format_url" title="永久链接至目标">¶</a></dt>
+<dd><p>格式化URL
+url编码, 使URL安全
+对查询参数进行排序，先按键，后按值
+将所有空格（在查询参数中）’+’（加号）规范化
+将百分比编码的大小写规范化（%2f-&gt;%2F）。
+删除有空白值的查询参数</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>url</strong> – <a class="reference external" href="http://www.example.com">http://www.example.com</a>/résumé</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://www.example.com/r%C3%A9sum%C3%A9">http://www.example.com/r%C3%A9sum%C3%A9</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.url.parse_params">
+<span class="sig-prename descclassname"><span class="pre">utils.url.</span></span><span class="sig-name descname"><span class="pre">parse_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.url.parse_params" title="永久链接至目标">¶</a></dt>
+<dd><p>解析出url的后缀生成字典</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>url</strong> – ‘<a class="reference external" href="http://xxx?a=1&amp;b=2">http://xxx?a=1&amp;b=2</a>’</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>{“a”: [‘1’], “b”: [‘2’]}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.url.url_encode">
+<span class="sig-prename descclassname"><span class="pre">utils.url.</span></span><span class="sig-name descname"><span class="pre">url_encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safe_word</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.url.url_encode" title="永久链接至目标">¶</a></dt>
+<dd><p>字符串 url编码</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>safe_word</strong> – </p></li>
+<li><p><strong>string</strong> – ‘你好’</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>‘%E4%BD%A0%E5%A5%BD’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.url.url_fix">
+<span class="sig-prename descclassname"><span class="pre">utils.url.</span></span><span class="sig-name descname"><span class="pre">url_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">response_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detail_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#utils.url.url_fix" title="永久链接至目标">¶</a></dt>
+<dd><p>根据请求url拼接不完整的url</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>response_url</strong> – 请求url</p></li>
+<li><p><strong>detail_url</strong> – 需要拼接的url</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>拼接完成的url</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.url.url_query_encode">
+<span class="sig-prename descclassname"><span class="pre">utils.url.</span></span><span class="sig-name descname"><span class="pre">url_query_encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.url.url_query_encode" title="永久链接至目标">¶</a></dt>
+<dd><p>对params 的字典 进行url编码</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>query</strong> – {‘wd’: ‘Python3标准库’}</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>‘wd=Python3%E6%A0%87%E5%87%86%E5%BA%93’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.url.url_query_to_dict">
+<span class="sig-prename descclassname"><span class="pre">utils.url.</span></span><span class="sig-name descname"><span class="pre">url_query_to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.url.url_query_to_dict" title="永久链接至目标">¶</a></dt>
+<dd><p>将url后的参数提取出来生成字典</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>query</strong> – https/www.xxxx.com?a=2&amp;c=3</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>{‘a’:’2’,’c’:’3’}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.url.url_unencode">
+<span class="sig-prename descclassname"><span class="pre">utils.url.</span></span><span class="sig-name descname"><span class="pre">url_unencode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.url.url_unencode" title="永久链接至目标">¶</a></dt>
+<dd><p>字符串 url解码</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>string</strong> – ‘%E4%BD%A0%E5%A5%BD’</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>‘你好’</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">目录</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Utils方法</a><ul>
+<li><a class="reference internal" href="#module-utils.date">date（时间）</a><ul>
+<li><a class="reference internal" href="#utils.date.date_ago"><code class="docutils literal notranslate"><span class="pre">date_ago()</span></code></a></li>
+<li><a class="reference internal" href="#utils.date.date_parse"><code class="docutils literal notranslate"><span class="pre">date_parse()</span></code></a></li>
+<li><a class="reference internal" href="#utils.date.greater_than_oneday"><code class="docutils literal notranslate"><span class="pre">greater_than_oneday()</span></code></a></li>
+<li><a class="reference internal" href="#utils.date.javascript_timestamp"><code class="docutils literal notranslate"><span class="pre">javascript_timestamp()</span></code></a></li>
+<li><a class="reference internal" href="#utils.date.now_timestamp"><code class="docutils literal notranslate"><span class="pre">now_timestamp()</span></code></a></li>
+<li><a class="reference internal" href="#utils.date.previous_date"><code class="docutils literal notranslate"><span class="pre">previous_date()</span></code></a></li>
+<li><a class="reference internal" href="#utils.date.time_transformation"><code class="docutils literal notranslate"><span class="pre">time_transformation()</span></code></a></li>
+<li><a class="reference internal" href="#utils.date.time_zone_conversion"><code class="docutils literal notranslate"><span class="pre">time_zone_conversion()</span></code></a></li>
+<li><a class="reference internal" href="#utils.date.timestamp_to_date"><code class="docutils literal notranslate"><span class="pre">timestamp_to_date()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-utils.exceptions">exceptions</a><ul>
+<li><a class="reference internal" href="#utils.exceptions.CaptchaFixError"><code class="docutils literal notranslate"><span class="pre">CaptchaFixError</span></code></a></li>
+<li><a class="reference internal" href="#utils.exceptions.NoContentAndFile"><code class="docutils literal notranslate"><span class="pre">NoContentAndFile</span></code></a></li>
+<li><a class="reference internal" href="#utils.exceptions.NoExtType"><code class="docutils literal notranslate"><span class="pre">NoExtType</span></code></a></li>
+<li><a class="reference internal" href="#utils.exceptions.StatusCodeNotAllow"><code class="docutils literal notranslate"><span class="pre">StatusCodeNotAllow</span></code></a></li>
+<li><a class="reference internal" href="#utils.exceptions.TooManyTriesError"><code class="docutils literal notranslate"><span class="pre">TooManyTriesError</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-utils.file">file</a><ul>
+<li><a class="reference internal" href="#utils.file.ztb_transform"><code class="docutils literal notranslate"><span class="pre">ztb_transform()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-utils.html">html</a><ul>
+<li><a class="reference internal" href="#utils.html.html_unescape"><code class="docutils literal notranslate"><span class="pre">html_unescape()</span></code></a></li>
+<li><a class="reference internal" href="#utils.html.remove_comments"><code class="docutils literal notranslate"><span class="pre">remove_comments()</span></code></a></li>
+<li><a class="reference internal" href="#utils.html.remove_escape_chars"><code class="docutils literal notranslate"><span class="pre">remove_escape_chars()</span></code></a></li>
+<li><a class="reference internal" href="#utils.html.remove_html5_whitespace"><code class="docutils literal notranslate"><span class="pre">remove_html5_whitespace()</span></code></a></li>
+<li><a class="reference internal" href="#utils.html.remove_tags"><code class="docutils literal notranslate"><span class="pre">remove_tags()</span></code></a></li>
+<li><a class="reference internal" href="#utils.html.remove_tags_content"><code class="docutils literal notranslate"><span class="pre">remove_tags_content()</span></code></a></li>
+<li><a class="reference internal" href="#utils.html.replace_tags"><code class="docutils literal notranslate"><span class="pre">replace_tags()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-utils.js_function">js_function</a><ul>
+<li><a class="reference internal" href="#utils.js_function.clear_function"><code class="docutils literal notranslate"><span class="pre">clear_function()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-utils.number">number</a></li>
+<li><a class="reference internal" href="#module-utils.response">response</a><ul>
+<li><a class="reference internal" href="#utils.response.get_set_cookie"><code class="docutils literal notranslate"><span class="pre">get_set_cookie()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-utils.text">text</a><ul>
+<li><a class="reference internal" href="#utils.text.clean_text"><code class="docutils literal notranslate"><span class="pre">clean_text()</span></code></a></li>
+<li><a class="reference internal" href="#utils.text.clear_file_name"><code class="docutils literal notranslate"><span class="pre">clear_file_name()</span></code></a></li>
+<li><a class="reference internal" href="#utils.text.clear_title"><code class="docutils literal notranslate"><span class="pre">clear_title()</span></code></a></li>
+<li><a class="reference internal" href="#utils.text.tailless"><code class="docutils literal notranslate"><span class="pre">tailless()</span></code></a></li>
+<li><a class="reference internal" href="#utils.text.text_to_json"><code class="docutils literal notranslate"><span class="pre">text_to_json()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-utils.url">url</a><ul>
+<li><a class="reference internal" href="#utils.url.add_or_replace_param"><code class="docutils literal notranslate"><span class="pre">add_or_replace_param()</span></code></a></li>
+<li><a class="reference internal" href="#utils.url.add_or_replace_params"><code class="docutils literal notranslate"><span class="pre">add_or_replace_params()</span></code></a></li>
+<li><a class="reference internal" href="#utils.url.clean_url"><code class="docutils literal notranslate"><span class="pre">clean_url()</span></code></a></li>
+<li><a class="reference internal" href="#utils.url.format_url"><code class="docutils literal notranslate"><span class="pre">format_url()</span></code></a></li>
+<li><a class="reference internal" href="#utils.url.parse_params"><code class="docutils literal notranslate"><span class="pre">parse_params()</span></code></a></li>
+<li><a class="reference internal" href="#utils.url.url_encode"><code class="docutils literal notranslate"><span class="pre">url_encode()</span></code></a></li>
+<li><a class="reference internal" href="#utils.url.url_fix"><code class="docutils literal notranslate"><span class="pre">url_fix()</span></code></a></li>
+<li><a class="reference internal" href="#utils.url.url_query_encode"><code class="docutils literal notranslate"><span class="pre">url_query_encode()</span></code></a></li>
+<li><a class="reference internal" href="#utils.url.url_query_to_dict"><code class="docutils literal notranslate"><span class="pre">url_query_to_dict()</span></code></a></li>
+<li><a class="reference internal" href="#utils.url.url_unencode"><code class="docutils literal notranslate"><span class="pre">url_unencode()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>上一主题</h4>
+    <p class="topless"><a href="index.html"
+                          title="上一章">utils说明文档</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Utils.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="utils说明文档"
+             >上一页</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">utils说明文档 0.1 文档</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Utils方法</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2023, yuliao.xu.
+      由 <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3创建。
+    </div>
+  </body>
+</html>
