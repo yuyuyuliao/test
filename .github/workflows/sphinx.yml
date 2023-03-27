@@ -6,8 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - run: pip install sphinx-press-theme
     - uses: actions/checkout@v3
+    - run: pip install sphinx-press-theme
     - name: Build HTML
       uses: ammaraskar/sphinx-action@master
     - name: Upload artifacts
