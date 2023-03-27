@@ -8,7 +8,9 @@
 import pathlib
 import sys
 
-html_theme = "classic"
+html_theme_path = ['.']
+html_theme = "sphinx_press_theme"
+
 sys.path.insert(0, pathlib.Path(__file__).parents[2].resolve().as_posix())
 
 project = "utils说明文档"
