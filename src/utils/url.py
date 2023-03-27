@@ -1,14 +1,7 @@
 from urllib import parse
 from urllib.parse import parse_qs, urlparse
-from w3lib.url import (
-    add_or_replace_parameter,
-    add_or_replace_parameters,
-    canonicalize_url,
-)
 
 from utils.constants import EXT_TYPES
-
-
 
 
 def is_attachment_href(href) -> bool:
@@ -94,44 +87,6 @@ def clean_url(url_string):
     :return:  'http://xxxxx.xxxxx.xxxx'
     """
     return url_string.replace('"', "").replace(" ", "").replace("target=_blank", "")
-
-
-def add_or_replace_param(url: str, param_key: str, param_value: str) -> str:
-    """
-    新增或替换url中的单个参数
-
-    :param url: http://www.example.com/index.php
-    :param param_key: arg
-    :param param_value: v
-    :return: http://www.example.com/index.php?arg=v
-    """
-    return add_or_replace_parameter(url, param_key, param_value)
-
-
-def add_or_replace_params(url: str, params: dict) -> str:
-    """
-    新增或替换url中的多个参数
-
-    :param url: http://www.example.com/index.php
-    :param params: {"arg", "v"}
-    :return: http://www.example.com/index.php?arg=v
-    """
-    return add_or_replace_parameters(url, params)
-
-
-def format_url(url: str):
-    """
-    格式化URL
-    url编码, 使URL安全
-    对查询参数进行排序，先按键，后按值
-    将所有空格（在查询参数中）'+'（加号）规范化
-    将百分比编码的大小写规范化（%2f->%2F）。
-    删除有空白值的查询参数
-
-    :param url: http://www.example.com/r\u00e9sum\u00e9
-    :return: http://www.example.com/r%C3%A9sum%C3%A9
-    """
-    return canonicalize_url(url)
 
 
 def parse_params(url: str):
