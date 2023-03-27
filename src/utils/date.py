@@ -1,31 +1,13 @@
 import time
 from datetime import datetime, timedelta, date
-import arrow
 import dateparser
 
 from utils.constants import TIMEZONE
 from utils.utils import register_for_jinja2
 
 
-def current_time() -> str:
-    """
-    按照特定的格式返回当前的时间
-    此格式结构根据招内解析代码定义，勿轻易修改
-
-    :return: date
-    """
-    local = arrow.utcnow().to(TIMEZONE)
-    return local.strftime("%a %b %d %H:%M:%S %Y %z")
 
 
-def current_date() -> str:
-    """
-    按照特定的格式返回当前的日志
-
-    :return: date
-    """
-    local = arrow.utcnow().to(TIMEZONE)
-    return local.strftime("%Y-%m-%d")
 
 
 def date_ago(target_date):
@@ -52,14 +34,6 @@ def time_transformation(timestamp):
     return date_time
 
 
-def timestamp_to_date(timestamp):
-    """
-    时间戳 转换成日期
-
-    :param timestamp: 时间戳 10位
-    :return: 日期  年-月-日
-    """
-    return arrow.get(timestamp).format("YYYY-MM-DD")
 
 
 def time_zone_conversion(date_time, time_zone):
@@ -77,14 +51,6 @@ def time_zone_conversion(date_time, time_zone):
     return datetime_n
 
 
-def javascript_timestamp():
-    """
-    同 js代码  Date.parse(dt)
-    得到 13 位当前时间的时间戳 如1562255999000，后三位固定为 000
-
-    :return: 时间戳
-    """
-    return int(str(int(arrow.now().timestamp())) + "000")
 
 
 def now_timestamp():

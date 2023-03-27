@@ -3,7 +3,6 @@ from asyncio import iscoroutinefunction
 from functools import wraps, partial
 from typing import Callable
 
-from loguru import logger
 
 from utils.constants import EXT_TYPES
 from utils.exceptions import TooManyTriesError
@@ -57,7 +56,6 @@ def retry(times: int):
                         return func(*args, **kwargs)
                 except Exception as exc:
                     pass
-                    logger.error(f"{func.__name__} error: {exc}")
             raise TooManyTriesError(f"{func.__name__} too many retries")
 
         return wrapped
@@ -80,7 +78,7 @@ def retry_no_async(times: int):
                 try:
                     return func(*args, **kwargs)
                 except Exception as exc:
-                    logger.error(f"{func.__name__} error: {exc}")
+                    pass
             raise TooManyTriesError(f"{func.__name__} too many retries")
 
         return wrapped
@@ -121,7 +119,6 @@ def file_add_ext_type(file_url, file_title):
                 new_file_title = file_title + f".{ext_type}"
                 return origin_file_title, new_file_title
     else:
-        logger.warning(f"{file_url}，{file_title}没有后缀")
         new_file_title = ""
         return origin_file_title, new_file_title
 
