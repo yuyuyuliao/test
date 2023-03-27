@@ -3,6 +3,30 @@ from datetime import datetime, timedelta, date
 import arrow
 import dateparser
 
+from utils.constants import TIMEZONE
+from utils.utils import register_for_jinja2
+
+
+def current_time() -> str:
+    """
+    按照特定的格式返回当前的时间
+    此格式结构根据招内解析代码定义，勿轻易修改
+
+    :return: date
+    """
+    local = arrow.utcnow().to(TIMEZONE)
+    return local.strftime("%a %b %d %H:%M:%S %Y %z")
+
+
+def current_date() -> str:
+    """
+    按照特定的格式返回当前的日志
+
+    :return: date
+    """
+    local = arrow.utcnow().to(TIMEZONE)
+    return local.strftime("%Y-%m-%d")
+
 
 def date_ago(target_date):
     """
@@ -15,6 +39,7 @@ def date_ago(target_date):
     return (datetime.today() - dateparser.parse(str(target_date))).days
 
 
+@register_for_jinja2(name="time_trans")
 def time_transformation(timestamp):
     """
     jinja2 时间戳转换日期

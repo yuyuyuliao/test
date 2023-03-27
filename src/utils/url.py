@@ -6,6 +6,24 @@ from w3lib.url import (
     canonicalize_url,
 )
 
+from utils.constants import EXT_TYPES
+
+
+
+
+def is_attachment_href(href) -> bool:
+    """判断链接是否含有附件
+
+    :param: href (str): 字符串链接 <a href='xxxx'>name.pdf</a>
+    :return: bool: True or False
+    """
+    if not href:
+        return False
+    for ext in EXT_TYPES:
+        if ext in href:
+            return True
+    return False
+
 
 def url_fix(response_url: str, detail_url: str) -> str:
     """
