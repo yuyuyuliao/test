@@ -10,7 +10,7 @@ import sys
 sys.path.insert(0, '../src/')
 
 html_theme_path = ['.']
-html_theme = "topos_theme"
+html_theme = "sphinx_sizzle_theme"
 
 
 project = "utils说明文档"
