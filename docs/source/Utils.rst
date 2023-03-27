@@ -3,7 +3,7 @@ Utils方法
 
 date(日期)
 ------------
-.. automodule:: utils.date_function
+.. automodule:: utils.date
    :members:
    :undoc-members:
    :show-inheritance:
@@ -53,14 +53,14 @@ text
 
 url
 ------------
-.. automodule:: utils.url_function
+.. automodule:: utils.url
    :members:
    :undoc-members:
    :show-inheritance:
 
 utils
 ------------
-.. automodule:: utils.utils_function
+.. automodule:: utils.utils
    :members:
    :undoc-members:
    :show-inheritance:

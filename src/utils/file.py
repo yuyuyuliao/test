@@ -1,4 +1,4 @@
-from utils.url_function import url_query_encode, url_query_to_dict
+from utils.url import url_query_encode, url_query_to_dict
 
 
 def ztb_transform(origin_file_url):

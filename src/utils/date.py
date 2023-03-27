@@ -4,7 +4,7 @@ import arrow
 import dateparser
 
 from utils.constants import TIMEZONE
-from utils.utils_function import register_for_jinja2
+from utils.utils import register_for_jinja2
 
 
 def current_time() -> str:
