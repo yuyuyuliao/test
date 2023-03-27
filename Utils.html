@@ -1,96 +1,81 @@
+
 <!DOCTYPE html>
-<html  lang="zh_CN">
+
+<html lang="zh_CN">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-      <title>Utils方法</title>
-    
-          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
-      
-      <!-- sphinx script_files -->
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/translations.js"></script>
-
-      
-      <!-- bundled in js (rollup iife) -->
-      <!-- <script src="_static/theme-vendors.js"></script> -->
-      <script src="_static/theme.js" defer></script>
-    
-  <link rel="index" title="索引" href="genindex.html" />
-  <link rel="search" title="搜索" href="search.html" />
-  <link rel="prev" title="utils说明文档" href="index.html" /> 
-  </head>
-
-  <body>
-    <div id="app">
-    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
-  <router-link to="index.html" class="home-link">
-    
-      <span class="site-name">utils说明文档</span>
-    
-  </router-link>
-
-  <div class="links">
-    <navlinks class="can-hide">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Utils方法 | utils说明文档 v</title>
 
 
+<link rel="stylesheet" href="_static/css/layout.css" type="text/css" />
+<link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
-    </navlinks>
-  </div>
-</navbar>
-
-      
-      <div class="sidebar-mask" @click="toggleSidebar(false)">
-      </div>
-        <sidebar @toggle-sidebar="toggleSidebar">
-          
-          <navlinks>
-            
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+<link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/layout.css" />
 
 
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="utils说明文档 (主题等正式上线后再修改)" href="index.html" />
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#222">
 
-            
-          </navlinks><div id="searchbox" class="searchbox" role="search">
-  <div class="caption"><span class="caption-text">快速搜索</span>
-    <div class="searchformwrapper">
-      <form class="search" action="search.html" method="get">
-        <input type="text" name="q" />
-        <input type="submit" value="搜索" />
-        <input type="hidden" name="check_keywords" value="yes" />
-        <input type="hidden" name="area" value="default" />
-      </form>
-    </div>
-  </div>
-</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
-  
-</div>
-        </sidebar>
+  </head><body class="grid">
+        <div class="left-sidebar sidebar fg-light bg-dark">
+            <div class="side-content">
+                <a href="index.html"
+                id="site-name"
+                class="fg-light"><h2>utils说明文档<sub class="fg-accent">v</sub></h2></a>
+                <form class="search" action="search.html" method="get">
+                    <input class="search-bar bg-dark" type="text" name="q" placeholder="Search"/>
+                    <input type="hidden" name="check_keywords" value="yes" />
+                    <input type="hidden" name="area" value="default" />
+                </form>
+            </div>
+        </div>
 
-      <page>
-          <div class="body-header" role="navigation" aria-label="navigation">
-  
-  <ul class="breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-    
-    <li>Utils方法</li>
-  </ul>
-  
-
-  <ul class="page-nav">
-  <li class="prev">
-    <a href="index.html"
-       title="上一章">← utils说明文档</a>
-  </li>
+        <div class="right-sidebar sidebar fg-light bg-dark">
+                <div class="side-content">
+                <div class="menu">
+                    <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Utils方法</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils.date">date(日期)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils.exceptions">exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils.html">html</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils.js_function">js_function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils.number">number</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils.response">response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils.text">text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils.url">url</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils.utils">utils</a></li>
 </ul>
-  
-</div>
-<hr>
-          <div class="content" role="main" v-pre>
-            
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#middlewares">middlewares</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-middlewares.headers">headers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-middlewares.proxies">proxies</a></li>
+</ul>
+</li>
+</ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="content bg-light">
+            <div class="main">
+                
   <div class="section" id="utils">
 <h1>Utils方法<a class="headerlink" href="#utils" title="永久链接至标题">¶</a></h1>
 <div class="section" id="module-utils.date">
@@ -614,23 +599,11 @@ key为=号前的内容 用于正则</p>
 </div>
 
 
-          </div>
-          <div class="page-nav">
-            <div class="inner"><ul class="page-nav">
-  <li class="prev">
-    <a href="index.html"
-       title="上一章">← utils说明文档</a>
-  </li>
-</ul><div class="footer" role="contentinfo">
-      &#169; 版权所有 2023, yuliao.xu.
-    <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
-</div>
             </div>
-          </div>
-      </page>
-    </div></div>
-    
-    
+        </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2023, yuliao.xu.
+      由 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0创建。
+    </div>
   </body>
 </html>
