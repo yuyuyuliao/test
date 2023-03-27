@@ -1,0 +1,24 @@
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  image: registry.cn-hangzhou.aliyuncs.com/pony-ma/python:3.10.10-slim-bullseye
+  tags:
+    - new-dev-runner-v2
+  before_script:
+    - pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+    - pip install sphinx
+  script:
+    - cd Scrapy/testspider/testspider/doc && make html
+  after_script:
+    - ls -al
+    - mv Scrapy/testspider/testspider/doc/build/html/ ./public/
+    - ls -al
+    - cd public && ls -al
+  artifacts:
+    expire_in: 1 week
+    paths:
+    - public
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
