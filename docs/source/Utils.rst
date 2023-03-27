@@ -65,6 +65,10 @@ utils
    :undoc-members:
    :show-inheritance:
 
+
+middlewares
+===============
+
 headers
 ------------
 .. automodule:: middlewares.headers
