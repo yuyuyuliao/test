@@ -3,7 +3,7 @@ Utils方法
 
 date
 ------------
-.. automodule:: src.utils.date
+.. automodule:: utils.date_function
    :members:
    :undoc-members:
    :show-inheritance:
@@ -11,70 +11,70 @@ date
 
 exceptions
 ------------
-.. automodule:: src.utils.exceptions
+.. automodule:: utils.exceptions
    :members:
    :undoc-members:
    :show-inheritance:
 
 html
 ------------
-.. automodule:: src.utils.html
+.. automodule:: utils.html
    :members:
    :undoc-members:
    :show-inheritance:
 
 js_function
 ------------
-.. automodule:: src.utils.js_function
+.. automodule:: utils.js_function
    :members:
    :undoc-members:
    :show-inheritance:
 
 number
 ------------
-.. automodule:: src.utils.number
+.. automodule:: utils.number
    :members:
    :undoc-members:
    :show-inheritance:
 
 response
 ------------
-.. automodule:: src.utils.response
+.. automodule:: utils.response
    :members:
    :undoc-members:
    :show-inheritance:
 
 text
 ------------
-.. automodule:: src.utils.text
+.. automodule:: utils.text
    :members:
    :undoc-members:
    :show-inheritance:
 
 url
 ------------
-.. automodule:: src.utils.url
+.. automodule:: utils.url_function
    :members:
    :undoc-members:
    :show-inheritance:
 
 utils
 ------------
-.. automodule:: src.utils.utils
+.. automodule:: utils.utils_function
    :members:
    :undoc-members:
    :show-inheritance:
 
 headers
 ------------
-.. automodule:: src.middlewares.headers
+.. automodule:: middlewares.headers
    :members:
    :undoc-members:
    :show-inheritance:
 
 proxies
 ------------
-.. automodule:: src.middlewares.proxies
+.. automodule:: middlewares.proxies
    :members:
    :undoc-members:
    :show-inheritance:
