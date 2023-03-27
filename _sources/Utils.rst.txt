@@ -1,9 +1,9 @@
 Utils方法
 ============
 
-date（时间）
+date
 ------------
-.. automodule:: Scrapy.testspider.testspider.utils.date
+.. automodule:: src.utils.date
    :members:
    :undoc-members:
    :show-inheritance:
@@ -11,50 +11,70 @@ date（时间）
 
 exceptions
 ------------
-.. automodule:: Scrapy.testspider.testspider.utils.exceptions
+.. automodule:: src.utils.exceptions
    :members:
    :undoc-members:
    :show-inheritance:
 
 html
 ------------
-.. automodule:: Scrapy.testspider.testspider.utils.html
+.. automodule:: src.utils.html
    :members:
    :undoc-members:
    :show-inheritance:
 
 js_function
 ------------
-.. automodule:: Scrapy.testspider.testspider.utils.js_function
+.. automodule:: src.utils.js_function
    :members:
    :undoc-members:
    :show-inheritance:
 
 number
 ------------
-.. automodule:: Scrapy.testspider.testspider.utils.number
+.. automodule:: src.utils.number
    :members:
    :undoc-members:
    :show-inheritance:
 
 response
 ------------
-.. automodule:: Scrapy.testspider.testspider.utils.response
+.. automodule:: src.utils.response
    :members:
    :undoc-members:
    :show-inheritance:
 
 text
 ------------
-.. automodule:: Scrapy.testspider.testspider.utils.text
+.. automodule:: src.utils.text
    :members:
    :undoc-members:
    :show-inheritance:
 
 url
 ------------
-.. automodule:: Scrapy.testspider.testspider.utils.url
+.. automodule:: src.utils.url
    :members:
    :undoc-members:
    :show-inheritance:
 
+utils
+------------
+.. automodule:: src.utils.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+headers
+------------
+.. automodule:: src.middlewares.headers
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+proxies
+------------
+.. automodule:: src.middlewares.proxies
+   :members:
+   :undoc-members:
+   :show-inheritance:
