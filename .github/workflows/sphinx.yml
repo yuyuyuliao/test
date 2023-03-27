@@ -7,7 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: pip install furo
+    - run: pip install sphinx-press-theme
+    - run: ls -al
     - name: Build HTML
       uses: ammaraskar/sphinx-action@master
     - name: Upload artifacts
