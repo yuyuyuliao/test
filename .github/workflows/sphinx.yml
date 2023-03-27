@@ -7,15 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: pip install sphinx-press-theme
-    - run: ls -al
     - name: Build HTML
       uses: ammaraskar/sphinx-action@master
     - name: Upload artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: html-docs
-        path: docs/build/html/
+      run: pip install sphinx-press-theme && pip install sphinx
+    - run: cd docs
+    - run: make html
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
