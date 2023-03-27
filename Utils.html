@@ -93,8 +93,86 @@
             
   <div class="section" id="utils">
 <h1>Utils方法<a class="headerlink" href="#utils" title="永久链接至标题">¶</a></h1>
-<div class="section" id="date">
-<h2>date(日期)<a class="headerlink" href="#date" title="永久链接至标题">¶</a></h2>
+<div class="section" id="module-utils.date">
+<span id="date"></span><h2>date(日期)<a class="headerlink" href="#module-utils.date" title="永久链接至标题">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.date.greater_than_oneday">
+<span class="sig-prename descclassname"><span class="pre">utils.date.</span></span><span class="sig-name descname"><span class="pre">greater_than_oneday</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">day_nums</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.date.greater_than_oneday" title="永久链接至目标">¶</a></dt>
+<dd><p>输入距今天数  和  某天日期，
+比较是否 距今天数的日期  &lt;=  某天</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>day_nums</strong> – 距今天数</p></li>
+<li><p><strong>target_date</strong> – 目标日期</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>是否小于等于</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.date.now_timestamp">
+<span class="sig-prename descclassname"><span class="pre">utils.date.</span></span><span class="sig-name descname"><span class="pre">now_timestamp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#utils.date.now_timestamp" title="永久链接至目标">¶</a></dt>
+<dd><p>返回13位当前时间的时间戳  后三位是有数字的！！！！！！</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>时间戳</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.date.previous_date">
+<span class="sig-prename descclassname"><span class="pre">utils.date.</span></span><span class="sig-name descname"><span class="pre">previous_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">day_nums</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%Y-%m-%d'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#utils.date.previous_date" title="永久链接至目标">¶</a></dt>
+<dd><p>输入数字返回距离当天第x天的日期 年-月-日 日期为该天00:00:00
+date_model 可以设置日期格式 默认为年-月-日  如 2001-01-31</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>date_model</strong> – 日期格式 （默认’%Y-%m-%d’）</p></li>
+<li><p><strong>day_nums</strong> – 相隔天数</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>目标日期</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.date.time_transformation">
+<span class="sig-prename descclassname"><span class="pre">utils.date.</span></span><span class="sig-name descname"><span class="pre">time_transformation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.date.time_transformation" title="永久链接至目标">¶</a></dt>
+<dd><p>jinja2 时间戳转换日期</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>timestamp</strong> – 时间戳 10位</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>日期  年-月-日</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.date.time_zone_conversion">
+<span class="sig-prename descclassname"><span class="pre">utils.date.</span></span><span class="sig-name descname"><span class="pre">time_zone_conversion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">date_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_zone</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.date.time_zone_conversion" title="永久链接至目标">¶</a></dt>
+<dd><p>将日期转换为设置时区的年月日</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>date_time</strong> – 如 2023-03-29T15:00:00.000+00:00 的str格式</p></li>
+<li><p><strong>time_zone</strong> – 时区 int格式</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>日期</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 <div class="section" id="module-utils.exceptions">
 <span id="exceptions"></span><h2>exceptions<a class="headerlink" href="#module-utils.exceptions" title="永久链接至标题">¶</a></h2>
@@ -129,8 +207,35 @@
 </dd></dl>
 
 </div>
-<div class="section" id="html">
-<h2>html<a class="headerlink" href="#html" title="永久链接至标题">¶</a></h2>
+<div class="section" id="module-utils.html">
+<span id="html"></span><h2>html<a class="headerlink" href="#module-utils.html" title="永久链接至标题">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.html.html_unescape">
+<span class="sig-prename descclassname"><span class="pre">utils.html.</span></span><span class="sig-name descname"><span class="pre">html_unescape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.html.html_unescape" title="永久链接至目标">¶</a></dt>
+<dd><p>将content 变成 html 语言
+比如 &amp;nt &amp;gt….. 变成&lt;&gt;</p>
+<p>:param content：待处理文本
+:return: html</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.html.replace_tags">
+<span class="sig-prename descclassname"><span class="pre">utils.html.</span></span><span class="sig-name descname"><span class="pre">replace_tags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old_tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_tag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.html.replace_tags" title="永久链接至目标">¶</a></dt>
+<dd><p>将文本中的tag类型替换</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – 待处理文本</p></li>
+<li><p><strong>old_tag</strong> – 需要替换的旧标签名</p></li>
+<li><p><strong>new_tag</strong> – 用来替换的新标签名</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>处理后的文本</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 <div class="section" id="module-utils.js_function">
 <span id="js-function"></span><h2>js_function<a class="headerlink" href="#module-utils.js_function" title="永久链接至标题">¶</a></h2>
@@ -475,6 +580,9 @@ key为=号前的内容 用于正则</p>
 </dd></dl>
 
 </div>
+</div>
+<div class="section" id="middlewares">
+<h1>middlewares<a class="headerlink" href="#middlewares" title="永久链接至标题">¶</a></h1>
 <div class="section" id="module-middlewares.headers">
 <span id="headers"></span><h2>headers<a class="headerlink" href="#module-middlewares.headers" title="永久链接至标题">¶</a></h2>
 <dl class="py class">
