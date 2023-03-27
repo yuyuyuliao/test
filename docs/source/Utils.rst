@@ -1,7 +1,7 @@
 Utils方法
 ============
 
-date
+date(日期)
 ------------
 .. automodule:: utils.date_function
    :members:
