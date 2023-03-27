@@ -96,7 +96,6 @@ def add_toctree_data(app, pagename, templatename, context, doctree):
             toctrees = list(app.env.toc_dict[entry_docname]['toctrees'])
 
             if toctrees:
-                # FIXME
                 assert len(toctrees) == 1, "Press: Not supported more then one toctree on nested toctree"
                 tree = toctrees[0]
 
@@ -140,7 +139,6 @@ def add_toctree_data(app, pagename, templatename, context, doctree):
         # second parent is the section containing the toctree
         toc_section = tree.parent.parent
         if toc_section['ids']: # no id means toc actually not in a section
-            # TODO: should we be strict about toc being inside a section
             anchor_id = toc_section['ids'][0]
             if not title:
                 title = toc_section['names'][0]
