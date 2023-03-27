@@ -1,24 +1,8 @@
 import time
 from datetime import datetime, timedelta, date
-import dateparser
 
 from utils.constants import TIMEZONE
 from utils.utils import register_for_jinja2
-
-
-
-
-
-
-def date_ago(target_date):
-    """
-    计算指定时间距离今天多少天
-    diff_date - current_date
-
-    :param target_date: 目标日期
-    :return: 天数差
-    """
-    return (datetime.today() - dateparser.parse(str(target_date))).days
 
 
 @register_for_jinja2(name="time_trans")
@@ -32,8 +16,6 @@ def time_transformation(timestamp):
     time_array = time.localtime(int(str(timestamp)[0:10]))
     date_time = time.strftime("%Y-%m-%d %H:%M:%S", time_array)
     return date_time
-
-
 
 
 def time_zone_conversion(date_time, time_zone):
@@ -51,8 +33,6 @@ def time_zone_conversion(date_time, time_zone):
     return datetime_n
 
 
-
-
 def now_timestamp():
     """
     返回13位当前时间的时间戳  后三位是有数字的！！！！！！
@@ -60,16 +40,6 @@ def now_timestamp():
     :return: 时间戳
     """
     return str(round(time.time() * 1000))
-
-
-def date_parse(date_str: str) -> "datetime":
-    """
-    输入任意字符串返回datetime类型
-
-    :param date_str: '1991-05-17' / 'In two months' / 1484823450
-    :return: datetime.datetime(2017, 1, 19, 10, 57, 30)
-    """
-    return dateparser.parse(date_str)
 
 
 def previous_date(day_nums: int, date_model="%Y-%m-%d") -> str:
