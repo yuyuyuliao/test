@@ -243,11 +243,237 @@ tailless(‘/a/b/c.docs’) # =&gt; ‘/a/b/c’</p>
 </dd></dl>
 
 </div>
-<div class="section" id="url">
-<h2>url<a class="headerlink" href="#url" title="永久链接至标题">¶</a></h2>
+<div class="section" id="module-utils.url">
+<span id="url"></span><h2>url<a class="headerlink" href="#module-utils.url" title="永久链接至标题">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.url.clean_url">
+<span class="sig-prename descclassname"><span class="pre">utils.url.</span></span><span class="sig-name descname"><span class="pre">clean_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url_string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.url.clean_url" title="永久链接至目标">¶</a></dt>
+<dd><p>对 正则匹配后的 a标签的href 进行清洗</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>url_string</strong> – ‘ “<a class="reference external" href="http://xxxxx.xxxxx.xxxx">http://xxxxx.xxxxx.xxxx</a>”  target=_blank’</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>‘<a class="reference external" href="http://xxxxx.xxxxx.xxxx">http://xxxxx.xxxxx.xxxx</a>’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.url.is_attachment_href">
+<span class="sig-prename descclassname"><span class="pre">utils.url.</span></span><span class="sig-name descname"><span class="pre">is_attachment_href</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">href</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#utils.url.is_attachment_href" title="永久链接至目标">¶</a></dt>
+<dd><p>判断链接是否含有附件</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>href (str): 字符串链接 &lt;a href=’xxxx’&gt;name.pdf&lt;/a&gt;</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>bool: True or False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.url.parse_params">
+<span class="sig-prename descclassname"><span class="pre">utils.url.</span></span><span class="sig-name descname"><span class="pre">parse_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.url.parse_params" title="永久链接至目标">¶</a></dt>
+<dd><p>解析出url的后缀生成字典</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>url</strong> – ‘<a class="reference external" href="http://xxx?a=1&amp;b=2">http://xxx?a=1&amp;b=2</a>’</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>{“a”: [‘1’], “b”: [‘2’]}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.url.url_encode">
+<span class="sig-prename descclassname"><span class="pre">utils.url.</span></span><span class="sig-name descname"><span class="pre">url_encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safe_word</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.url.url_encode" title="永久链接至目标">¶</a></dt>
+<dd><p>字符串 url编码</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>safe_word</strong> – </p></li>
+<li><p><strong>string</strong> – ‘你好’</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>‘%E4%BD%A0%E5%A5%BD’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.url.url_fix">
+<span class="sig-prename descclassname"><span class="pre">utils.url.</span></span><span class="sig-name descname"><span class="pre">url_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">response_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detail_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#utils.url.url_fix" title="永久链接至目标">¶</a></dt>
+<dd><p>根据请求url拼接不完整的url</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>response_url</strong> – 请求url</p></li>
+<li><p><strong>detail_url</strong> – 需要拼接的url</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>拼接完成的url</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.url.url_query_encode">
+<span class="sig-prename descclassname"><span class="pre">utils.url.</span></span><span class="sig-name descname"><span class="pre">url_query_encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.url.url_query_encode" title="永久链接至目标">¶</a></dt>
+<dd><p>对params 的字典 进行url编码</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>query</strong> – {‘wd’: ‘Python3标准库’}</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>‘wd=Python3%E6%A0%87%E5%87%86%E5%BA%93’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.url.url_query_to_dict">
+<span class="sig-prename descclassname"><span class="pre">utils.url.</span></span><span class="sig-name descname"><span class="pre">url_query_to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.url.url_query_to_dict" title="永久链接至目标">¶</a></dt>
+<dd><p>将url后的参数提取出来生成字典</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>query</strong> – https/www.xxxx.com?a=2&amp;c=3</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>{‘a’:’2’,’c’:’3’}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.url.url_unencode">
+<span class="sig-prename descclassname"><span class="pre">utils.url.</span></span><span class="sig-name descname"><span class="pre">url_unencode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.url.url_unencode" title="永久链接至目标">¶</a></dt>
+<dd><p>字符串 url解码</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>string</strong> – ‘%E4%BD%A0%E5%A5%BD’</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>‘你好’</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
-<div class="section" id="id1">
-<h2>utils<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="section" id="module-utils.utils">
+<span id="id1"></span><h2>utils<a class="headerlink" href="#module-utils.utils" title="永久链接至标题">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.utils.false_to_str">
+<span class="sig-prename descclassname"><span class="pre">utils.utils.</span></span><span class="sig-name descname"><span class="pre">false_to_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">false</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#utils.utils.false_to_str" title="永久链接至目标">¶</a></dt>
+<dd><p>将python中被认为是false类型的数据转为空字符串</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>false</strong> – None / [] / {} / false</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.utils.file_add_ext_type">
+<span class="sig-prename descclassname"><span class="pre">utils.utils.</span></span><span class="sig-name descname"><span class="pre">file_add_ext_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_title</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.utils.file_add_ext_type" title="永久链接至目标">¶</a></dt>
+<dd><p>输入文件url，文件名，判断是否有后缀，如果文件名没后缀，加url内的</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_url</strong> – 文件url</p></li>
+<li><p><strong>file_title</strong> – 文件名</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>原始文件名，新文件名</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.utils.form_data_to_json">
+<span class="sig-prename descclassname"><span class="pre">utils.utils.</span></span><span class="sig-name descname"><span class="pre">form_data_to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#utils.utils.form_data_to_json" title="永久链接至目标">¶</a></dt>
+<dd><p>将form表单字符串转为json</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – provinceJT=JT&amp;docTitle=&amp;docCode=</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>{‘provinceJT’: ‘JT’, ‘docTitle’: ‘’, ‘docCode’: ‘’}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.utils.get_filename_by_headers">
+<span class="sig-prename descclassname"><span class="pre">utils.utils.</span></span><span class="sig-name descname"><span class="pre">get_filename_by_headers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">headers</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.utils.get_filename_by_headers" title="永久链接至目标">¶</a></dt>
+<dd><p>输入提取后的response.headers内容
+形如 response.headers[“Content-Disposition”]
+b’attachment;filename=”NMG00014000000479-%E6%BB%A1%E6%B4%B2%E9%87%8C%E5%B8%82%E7%A7%83%E5%B0%BE%E5%B1%B1%E5%8E%86%E5%8F%B2%E9%81%97%E7%95%99%E5%9C%B0%E8%B4%A8%E7%8E%AF%E5%A2%83%E5%92%8C%E8%8D%89%E5%8E%9F%E6%A4%8D%E8%A2%AB%E7%94%9F%E6%80%81%E4%BF%AE%E5%A4%8D%E5%B7%A5%E7%A8%8B%EF%BC%88%E4%BA%8C%E6%AC%A1%EF%BC%89.pdf”’
+key为=号前的内容 用于正则</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>headers</strong> – 响应头</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>文件名</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.utils.register_for_jinja2">
+<span class="sig-prename descclassname"><span class="pre">utils.utils.</span></span><span class="sig-name descname"><span class="pre">register_for_jinja2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.utils.register_for_jinja2" title="永久链接至目标">¶</a></dt>
+<dd><p>将函数注册到jinja2_template_funcs之中
+注册后的函数可以在jinja2模版中进行调用</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – jinja2模版中调用使用的名字，默认为func name</p></li>
+<li><p><strong>func</strong> – 函数对象</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>函数</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.utils.retry">
+<span class="sig-prename descclassname"><span class="pre">utils.utils.</span></span><span class="sig-name descname"><span class="pre">retry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.utils.retry" title="永久链接至目标">¶</a></dt>
+<dd><p>简单的重试装饰器</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>times</strong> – 重试次数</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.utils.retry_no_async">
+<span class="sig-prename descclassname"><span class="pre">utils.utils.</span></span><span class="sig-name descname"><span class="pre">retry_no_async</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.utils.retry_no_async" title="永久链接至目标">¶</a></dt>
+<dd><p>简单的重试装饰器</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>times</strong> – 重试次数</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 <div class="section" id="module-middlewares.headers">
 <span id="headers"></span><h2>headers<a class="headerlink" href="#module-middlewares.headers" title="永久链接至标题">¶</a></h2>
