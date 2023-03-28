@@ -16,7 +16,7 @@ html_theme = "sphinx_sizzle_theme"
 project = "utils说明文档"
 copyright = "2023, yuliao.xu"
 author = "yuliao.xu"
-release = 'https://git.rccchina.com/zev.xie/spider-utils'
+release = '1.0'
 
 
 # -- General configuration ---------------------------------------------------
